@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+seed = -97
+octaves = 9
+period = 30.8
+persistence = 0.434
+lacunarity = 2.2
+
+[sub_resource type="NoiseTexture" id=2]
+flags = 0
+width = 2048
+height = 2048
+seamless = true
+bump_strength = 9.4
+noise = SubResource( 1 )
+
+[node name="TextureRect" type="TextureRect"]
+modulate = Color( 0.396078, 0.396078, 0.396078, 1 )
+self_modulate = Color( 0.333333, 0.333333, 0.333333, 1 )
+margin_left = -0.132431
+margin_right = 39.8676
+margin_bottom = 40.0
+texture = SubResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
